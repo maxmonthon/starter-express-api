@@ -13,13 +13,12 @@ app.use(express.json());
 app.use("/suppliers", supplierRoute);
 app.use("/products", productRoute);
 
-app.listen(PORT, () => {
-  console.log("Server running on port : " + PORT);
-});
-
-// app.listen("/", (req, res) => {
-//   console.log("Run server!");
-//   res.send("Yo!");
+// app.listen(PORT, () => {
+//   console.log("Server running on port : " + PORT);
 // });
 
-// app.listen(process.env.PORT || 5000);
+app.listen((req, res) => {
+  console.log("Run server!");
+});
+
+app.listen(process.env.PORT || 5000);
